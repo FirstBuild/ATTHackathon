@@ -1,0 +1,38 @@
+<!-- conn.message({"devices": "52885d81-31f3-11e4-805c-a33b31204b7a","payload": {"fun":"yes"}}); -->
+
+<html>
+<head>
+  <script src="http://skynet.im/js/skynet.js"></script>
+  <script>
+var conn = skynet.createConnection({
+    "uuid": "52885d81-31f3-11e4-805c-a33b31204b7a",
+    "token": "4x8opql2wzq9qkt9y709jvbgwgclerk9",
+    "server": "skynet.im", // optional - defaults to ws://skynet.im
+    "port": 80  // optional - defaults to 80
+});
+    conn.on('ready', function(data){
+      console.log('Ready');
+
+      conn.on('message', function(data){
+        console.log(data);
+      });
+
+      conn.status(function (data) {
+        console.log(data);
+      });
+
+      conn.message({
+        "devices": "52885d81-31f3-11e4-805c-a33b31204b7a",
+        "payload": {
+          "hello":"world"
+        }
+      });
+
+    });
+  </script>
+
+</head>
+<body>
+  Skynet.JS Demo
+</body>
+</html>
