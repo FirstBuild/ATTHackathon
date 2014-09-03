@@ -3,6 +3,10 @@ ATTHackathon
 
 Notes and more for the ATT Las Vegas Hackathon
 
+### FirstBuild GreenBean Project
+https://firstbuild.com/mylescaley/greenbean-maker-module
+
+
 ### Configuration
 Raspberry PI's pre-configured with support for the Green Bean will be provided.
 
