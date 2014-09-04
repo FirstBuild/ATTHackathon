@@ -24,6 +24,9 @@ A vanilla app demoing a few examples of GreenBean communications
 ###PublicMeshBlu+GreenBean  
 Demo of a client communicating with a node.js device connected to the internets and starting a cook mode 
 
+###PrivateMeshBlu+GreenBean  
+Demo of a node.js client communicating with a node.js device connected to a local meshblu server and starting a cook mode 
+
 ###AllJoyn+GreenBean
 Discovery of GreenBean on network and sending a cook mode
 
