@@ -10,8 +10,8 @@
     var conn = skynet.createConnection({
         "uuid": ovenclientuuid,
         "token": ovenclienttoken,
-        "server": "skynet.im", // optional - defaults to ws://skynet.im
-        "port": 80  // optional - defaults to 80
+        "server": "skynet.im",
+        "port": 80
     });
     conn.on('ready', function(data){
       console.log('Ready!');
