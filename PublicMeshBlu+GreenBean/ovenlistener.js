@@ -12,8 +12,6 @@ greenBean.connect("range", function(range) {
     range.upperOven.cookMode.subscribe(function(value) {
         console.log("upper oven cook mode changed:", value);
     });
-
-
 });
 
 var conn = skynet.createConnection({

@@ -1,11 +1,34 @@
 ATTHackathon
 ============
 
-Notes and more for the ATT Las Vegas Hackathon
+Notes and more for the ATT Las Vegas Hackathon  
 
-### FirstBuild GreenBean Project
-https://firstbuild.com/mylescaley/greenbean-maker-module
+#Raspberry PI Image
+The rpi image contains the following:  
+    * /meshblu - a private meshblu network; not started by default. see <https://github.com/virgilvox/octoblu_tutorials/tree/master/AllSeenHackathon>  
+    * /home/pi/firstbuild/ATTHackathon - scripts related to GreenBean and AllJoyn|octoblu IoT stuffs  
+    * samba for editing files directly from Mac and Linux hosts  
+    * mdns to easily discover the rpi's ip (ping raspberrypi.local)  
+    
 
+#Apps  
+
+
+###AllJoynVanilla
+A vanilla app that demos an android device communicating with a node.js device
+
+###GreenBeanVanilla  
+A vanilla app demoing a few examples of GreenBean communications
+
+###PublicMeshBlu+GreenBean  
+Demo of a client communicating with a node.js device connected to the internets and starting a cook mode 
+
+###AllJoyn+GreenBean
+Discovery of GreenBean on network and sending a cook mode
+
+#GreenBean Overview  
+### FirstBuild GreenBean Project  
+<https://firstbuild.com/mylescaley/greenbean-maker-module>
 
 ### Configuration
 Raspberry PI's pre-configured with support for the Green Bean will be provided.
