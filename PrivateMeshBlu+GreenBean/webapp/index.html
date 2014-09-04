@@ -1,0 +1,51 @@
+<html>
+<head>
+  <script src="http://skynet.im/js/skynet.js"></script> <!--replace with local web server -->
+  <script>
+
+    var ovenclientuuid = "15a0f0b1-33df-11e4-b97b-a71351dfe50";
+    var ovenclienttoken = "j30bnoc0zbathuxry4fmzb49xhsyk3xr";
+    var ovenuuid = "00efda00-33df-11e4-b97b-a71351dfe500";
+
+    var conn = skynet.createConnection({
+        "uuid": ovenclientuuid,
+        "token": ovenclienttoken,
+        "server": "192.168.0.12", //replace with your raspberry pi address
+        "port": 80
+    });
+    conn.on('ready', function(data){
+      console.log('Ready!');
+
+      conn.on('message', function(data){
+        console.log(data);
+      });
+
+      conn.status(function (data) {
+        console.log(data);
+      });
+
+    });
+
+    function sendCookCommandToOven() {
+        console.log("sending cook command");
+        conn.message({
+            "devices": ovenuuid,
+            "payload": {
+                "cook":{
+                    mode: 18,
+                    cookTemperature: 350,
+                    cookHours: 1,
+                    cookMinutes: 0
+                }
+            }
+        });
+    }
+  </script>
+
+</head>
+<body>
+  FirstBuild GreenBean + MeshBlue Demo
+<br>
+open the developer console and type sendCookCommandToOven() to send a default cook cycle (see code)
+</body>
+</html>
