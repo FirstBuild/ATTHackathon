@@ -12,38 +12,37 @@ greenBean.connect("range", function(range) {
     range.upperOven.cookMode.subscribe(function(value) {
         console.log("upper oven cook mode changed:", value);
     });
-});
 
-var conn = skynet.createConnection({
-    "uuid": ovenuuid,
-    "token": oventoken,
-    "server": "127.0.0.1",
-    "port": 80
-});
-
-conn.on('ready', function(data){
-    console.log('ready');
-    console.log(data);
-
-    // Send and receive messages
-    conn.message({
-        "devices": "*",
-        "payload": {
-            "status":"ready"
-        }
+    var conn = skynet.createConnection({
+        "uuid": ovenuuid,
+        "token": oventoken,
+        "server": "127.0.0.1",
+        "port": 80
     });
 
-    conn.on('message', function(message){
-        console.log('message received')
-        console.log(message);
-        console.log(message.payload.cook);
-        range.upperOven.cookMode.write(message.payload.cook);
-    });
-
-    conn.whoami({"uuid":ovenuuid}, function (data) {
-        console.log("whoami status");
+    conn.on('ready', function(data){
+        console.log('ready');
         console.log(data);
+
+        // Send and receive messages
+        conn.message({
+            "devices": "*",
+            "payload": {
+                "status":"ready"
+            }
+        });
+
+        conn.on('message', function(message){
+            console.log('message received')
+            console.log(message);
+            console.log(message.payload.cook);
+            range.upperOven.cookMode.write(message.payload.cook);
+        });
+
+        conn.whoami({"uuid":ovenuuid}, function (data) {
+            console.log("whoami status");
+            console.log(data);
+        });
+
     });
-
 });
-
