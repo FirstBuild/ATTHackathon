@@ -5,12 +5,12 @@ Notes and more for the ATT Las Vegas Hackathon
 
 #Raspberry PI Image
 The rpi image contains the following:  
-    * home/pi/firstbuild/node_modules/green-bean - everything needed to connect to appliances via the green bean module     */home/pi/gateblu - Octoblu Gateway
-    */home/pi/hardware_examples - Scripts on how to use Raspberry Pi GPIO with octoblu 
+    * home/pi/firstbuild/node_modules/green-bean - everything needed to connect to appliances via the green bean module               */home/pi/gateblu - Octoblu Gateway  
+    */home/pi/hardware_examples - Scripts on how to use Raspberry Pi GPIO with octoblu   
  
-    * /home/pi/firstbuild/ATTHackathon - scripts related to GreenBean and AllJoyn|octoblu IoT stuffs  (enough to run demos in this repo)
-    * samba for editing files directly from Mac and Linux hosts  
-    * mdns to easily discover the rpi's ip (ping raspberrypi.local)  
+    * /home/pi/firstbuild/ATTHackathon - scripts related to GreenBean and AllJoyn|octoblu IoT stuffs  (enough to run demos in this repo)  
+    * samba for editing files directly from Mac and Linux hosts    
+    * mdns to easily discover the rpi's ip (ping raspberrypi.local, already installed: sudo apt-get install libnss-mdns)  
     
 #Setting up Raspberry Pi
 
